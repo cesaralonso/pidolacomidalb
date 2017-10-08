@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "ds113775.mlab.com",
+    "port": 13775,
+    "url": "",
+    "database": "pidolacomida",
+    "password": "${MONGO_PASS}",
+    "name": "mongo",
+    "user": "${MONGO_USER}",
+    "connector": "mongodb"
+  }
+}
