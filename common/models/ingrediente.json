@@ -1,0 +1,38 @@
+{
+  "name": "Ingrediente",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "calorias": {
+      "type": "number"
+    },
+    "carbohidratos": {
+      "type": "number"
+    },
+    "proteinas": {
+      "type": "number"
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "string",
+      "required": true
+    },
+    "baja": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

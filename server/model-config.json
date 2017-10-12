@@ -14,32 +14,53 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongo",
+    "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
-  "person": {
+  "Person": {
     "dataSource": "mongo",
     "public": true
   },
   "Message": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Restaurante": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Platillo": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Ingrediente": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Oferta": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "DireccionEmpresa": {
     "dataSource": "mongo",
     "public": true
   }

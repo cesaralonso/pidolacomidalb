@@ -1,0 +1,37 @@
+{
+  "name": "Oferta",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "precio": {
+      "type": "number",
+      "required": true
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "string",
+      "required": true
+    },
+    "baja": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

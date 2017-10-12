@@ -1,7 +1,7 @@
 {
-  "name": "person",
-  "plural": "people",
-  "base": "PersistedModel",
+  "name": "Person",
+  "plural": "People",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -17,10 +17,74 @@
     "email": {
       "type": "string",
       "required": true
+    },
+    "created": {
+      "type": "date"
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": {}
+  "relations": {
+    "messages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "personId"
+    },
+    "restaurantes": {
+      "type": "hasMany",
+      "model": "Restaurante",
+      "foreignKey": "created_by"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {
+    "whoami": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "body",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "Returns the person from teh access token",
+      "http": [
+        {
+          "path": "/whoami",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }

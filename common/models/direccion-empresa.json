@@ -1,0 +1,54 @@
+{
+  "name": "DireccionEmpresa",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "calle": {
+      "type": "string",
+      "required": true
+    },
+    "entreCalle1": {
+      "type": "string"
+    },
+    "entreCalle2": {
+      "type": "string"
+    },
+    "colonia": {
+      "type": "string",
+      "required": true
+    },
+    "numExt": {
+      "type": "number"
+    },
+    "numInt": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "lng": {
+      "type": "string"
+    },
+    "cp": {
+      "type": "number"
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "string",
+      "required": true
+    },
+    "baja": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

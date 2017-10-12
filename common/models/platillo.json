@@ -1,0 +1,32 @@
+{
+  "name": "Platillo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "string",
+      "required": true
+    },
+    "baja": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
